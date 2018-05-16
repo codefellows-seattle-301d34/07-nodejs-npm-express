@@ -12,8 +12,12 @@ app.get('/message', (request, response) => {
 
 app.get('/new', (request, response) => {
   response.sendFile('/public/new.html', {root: '.'});
-  response.sendFile('new.html', {root: './public'});
 });
+
+app.get('/index', (request, response) => {
+  response.sendFile('/public/index.html', {root: '.'});
+});
+
 
 // REVIEW: POST route needs to parse the body passed in with the request. express.urlencoded() attaches "middleware" to do that
 app.post('/articles', express.urlencoded(), (request, response) => {
@@ -22,4 +26,10 @@ app.post('/articles', express.urlencoded(), (request, response) => {
   response.status(201).json(request.body);
 });
 
+// Create a 404 route to handle any requests other than index.html or new.html, and deliver a 404 status and a message to those invalid requests
+app.get('/*', (request, response) => {
+  response.send('This is a 404 message', 404);
+});
+
 app.listen(PORT, () => console.log(`Listening on: ${PORT}`));
+
