@@ -51,7 +51,7 @@ Article.prototype.insertRecord = function(callback) {
     
       
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // If (callback) callback() serves the purpose of checking whether a parameter of callback (or what it represents) exists. If true, run the callback function. This is not being called at this point, but it has the potential to chain callbacks from another callback function.
       if (callback) callback();
     })
 };
