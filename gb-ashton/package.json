@@ -1,0 +1,21 @@
+{
+  "name": "gb-ashton",
+  "version": "1.0.0",
+  "description": "Kilovolt Blog Lab 7 NodeJs Express Lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "express",
+    "server"
+  ],
+  "author": "Ashton Ellis Tim GB Busch",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
