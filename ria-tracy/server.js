@@ -11,7 +11,6 @@ const ROOT ={root:'public'};
 app.use(express.static('public'));
 
 app.get('/new',(req, res)=>{
-  console.log(`request for new.html recieved`);
   res.sendFile('new.html',ROOT);
 });
 // REVIEW: POST route needs to parse the body passed in with the request. express.urlencoded() attaches "middleware" to do that
