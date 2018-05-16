@@ -1,0 +1,25 @@
+{
+  "name": "andrew-chris",
+  "version": "1.0.0",
+  "description": "Andrew and Chris' efforts on lab 7",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "express",
+    "server",
+    "lab07",
+    "andrew-chris",
+    "chris-andrew"
+  ],
+  "author": "Andrew Peacock Chris Hemenes",
+  "license": "MIT ",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
