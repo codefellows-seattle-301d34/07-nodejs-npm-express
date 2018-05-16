@@ -44,13 +44,24 @@ Article.fetchAll = () => {
 }
 
 // REVIEW: This new prototype method on the Article object constructor will allow us to create a new article from the new.html form page, and submit that data to the back-end. We will see this log out to the server in our terminal!
+// COMMENT: I didn't like the brittleness of the original code
+// so I replaced it with a more dynamic equivalent.
+// Originally I tried just passing "this" to $.post but that
+// resulted in very strange behavior, apparently related to the
+// presence of prototype methods on the object. By passing the
+// object through stringify and parse we get back a generic
+// object with all Article's properties but none of its 
+// inheritance/prototypes.
 Article.prototype.insertRecord = function(callback) {
-  $.post('/articles', {author: this.author, authorUrl: this.authorUrl, body: this.body, category: this.category, publishedOn: this.publishedOn, title: this.title})
+  $.post('/articles', JSON.parse(JSON.stringify(this)))
     .then(data => {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // This line invokes the callback function that is an 
+      // optional parameter to the insertRecord method. Since
+      // no callback was provided when we invoked insertRecord
+      // this line won't do anything.
       if (callback) callback();
     })
 };

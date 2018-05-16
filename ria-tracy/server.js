@@ -20,4 +20,14 @@ app.post('/articles', express.urlencoded(), (request, response) => {
   console.log(request.body);
   response.status(201).json(request.body);
 });
+
+// COMMENT: This is the catch-all function that response with
+// status 404 and a message in the browser if the user requests
+// a non-existant resource.
+app.use((req, res) => {
+  console.log('Catch-all error handler triggered');
+  res.status(404).send('Error 404: File not found.');
+});
+
+// COMMENT: Everything setup. Now start listening...
 app.listen(PORT,() =>console.log(`listening to:${PORT}`));
