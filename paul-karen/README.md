@@ -25,7 +25,9 @@ This application is a blog, which publishes articles from local storage, and use
 
 05-16-2018 9:13am - Installed server dependancies
 
-05-16-2018 9:28am - Express body-parser now functional 
+05-16-2018 9:28am - Express body-parser now functional
+
+05-16-2018 9:39am - Server now listening on PORT 3000
 
 ## Credits and Collaborations
 
