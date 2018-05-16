@@ -14,11 +14,6 @@ app.post('/articles', express.urlencoded({extended:true}), (request, response) =
 
 app.use(express.static('./public'));
 
-app.get('/message', (request, response) => {
-  response.send('This will show up in the browser');
-  console.log('This will show up in the terminal');
-});
-
 app.get('/new', (request, response) => {
   response.sendFile('/new.html', {root: './public'});
 });
