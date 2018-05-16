@@ -22,10 +22,10 @@ Article.prototype.toHtml = function() {
 };
 
 Article.loadAll = articleData => {
-  articleData.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)))
+  articleData.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
 
-  articleData.forEach(articleObject => Article.all.push(new Article(articleObject)))
-}
+  articleData.forEach(articleObject => Article.all.push(new Article(articleObject)));
+};
 
 Article.fetchAll = () => {
   if (localStorage.rawData) {
@@ -41,16 +41,17 @@ Article.fetchAll = () => {
         console.error(err);
       });
   }
-}
+};
 
 // REVIEW: This new prototype method on the Article object constructor will allow us to create a new article from the new.html form page, and submit that data to the back-end. We will see this log out to the server in our terminal!
 Article.prototype.insertRecord = function(callback) {
   $.post('/articles', {author: this.author, authorUrl: this.authorUrl, body: this.body, category: this.category, publishedOn: this.publishedOn, title: this.title})
     .then(data => {
       console.log(data);
-      
+
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // Callback is a chain function. What it's doing here is checking if there a callback exists produce another callback.
+
       if (callback) callback();
-    })
+    });
 };
