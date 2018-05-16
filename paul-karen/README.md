@@ -25,6 +25,8 @@ This application is a blog, which publishes articles from local storage, and use
 
 05-16-2018 9:13am - Installed server dependancies
 
+05-16-2018 9:28am - Express body-parser now functional 
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
