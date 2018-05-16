@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // This line is to handle a function being passed as an argument when Article.prototype.insertRecord is called. It will be called if a call back function is passed when Article.prototype.insertRecord is called, but for this lab, no callback function is passed in as an argument - so it does not run.
       if (callback) callback();
     });
 };
