@@ -28,6 +28,7 @@ app.post('/articles', express.urlencoded(), (request, response) => {
 // Create a 404 route to handle any requests other than index.html or new.html, and deliver a 404 status and a message to those invalid requests
 app.get('/*', (request, response) => {
   response.send('This is a 404 message', 404);
+  console.log('We just sent a 404 message.');
 });
 
 app.listen(PORT, () => console.log(`Listening on: ${PORT}`));
