@@ -1,0 +1,21 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Serveer and express lab 07",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "express",
+    "server"
+  ],
+  "author": "Matt Nate",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
