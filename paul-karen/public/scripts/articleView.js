@@ -75,7 +75,9 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+//Invoked at very end of new.html, equivalent to document.ready. 
+//Server is served on port 3000, /new url gets public/new.html. The HTML page is loaded, and this function is invoked at the end of the HTML page. This function mainly creatrs event listeners.
+
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -88,7 +90,8 @@ articleView.initNewArticlePage = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// Below function is called when the user changes focus on the form. That is done through the event listener from above.
+
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -113,7 +116,8 @@ articleView.create = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// When the user clicks the submit button on new.html. This is done through the event listener from the fnc initNewArticlePage()
+
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
