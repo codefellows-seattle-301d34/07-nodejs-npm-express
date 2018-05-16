@@ -75,7 +75,7 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-//Invoked at very end of new.html, equivalent to document.ready. 
+//Invoked at very end of new.html, equivalent to document.ready.
 //Server is served on port 3000, /new url gets public/new.html. The HTML page is loaded, and this function is invoked at the end of the HTML page. This function mainly creatrs event listeners.
 
 articleView.initNewArticlePage = () => {
@@ -130,7 +130,7 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // this function is defined in article.js, and invoked when the user clicks the submit button.
   article.insertRecord();
 };
 
