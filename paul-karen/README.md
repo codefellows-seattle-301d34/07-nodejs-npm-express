@@ -1,7 +1,7 @@
 # Kilovolt Blog
 
-**Author**: Paul Ritzman, Karen
-**Version**: 1.0.0
+**Author**: Paul Ritzman, Karen Lai 
+**Version**: 1.0.1
 
 ## Overview
 This application is a blog, which publishes articles from local storage, and uses AJAX to pull from an inlucded .json file.
@@ -22,6 +22,8 @@ This application is a blog, which publishes articles from local storage, and use
 
 ## Change Log
 05-16-2018 8:56am - Initial repo setup
+
+05-16-2018 9:13am - Installed server dependancies
 
 ## Credits and Collaborations
 
