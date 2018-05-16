@@ -6,8 +6,13 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static('./public'));
 //Comment: Files are in a public directory so that they are seperate from the view they are in the backend. The files are served by expressJS to deliver those files to the client side from the backend.
 app.get('/message', (request, response) => {
-  response.send('<h4>The Port the server is running is PORT 3000.</h4>');
+  response.send('The Port the server is running is PORT 3000.');
   console.log('This will show up in the terminal.');
+});
+
+app.get('/new', (request, response) => {
+  response.sendFile('/public/new.html', {root: '.'});
+  response.sendFile('new.html', {root: './public'});
 });
 
 // REVIEW: POST route needs to parse the body passed in with the request. express.urlencoded() attaches "middleware" to do that
