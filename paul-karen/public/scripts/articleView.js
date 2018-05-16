@@ -130,7 +130,7 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // this function is defined in article.js, and invoked when the user clicks the submit button.
   article.insertRecord();
 };
 
