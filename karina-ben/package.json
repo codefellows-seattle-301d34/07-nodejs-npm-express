@@ -1,0 +1,29 @@
+{
+  "name": "karina-ben",
+  "version": "1.0.0",
+  "description": "lab-07",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akarinaat/07-nodejs-npm-express.git"
+  },
+  "keywords": [
+    "nmp",
+    "express",
+    "node",
+    "server"
+  ],
+  "author": "Karina-Ben",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akarinaat/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/akarinaat/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
