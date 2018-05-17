@@ -1,3 +1,5 @@
+import { format } from "util";
+
 /* global Article*/
 'use strict';
 
@@ -76,7 +78,12 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// It is in invoked in a scipt tag at the end of new.html.
+// The loading of the new.html page
+// When this funciton is invoked, it:
+// 1. display the appropriate navigation tab, and hide all the others.
+// 2. sets up event listeners for the json preview, and form.
+
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -89,7 +96,8 @@ articleView.initNewArticlePage = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// this function is called in the articleView.initNewArticlePage() function.
+// it is triggered by a change to the form input and textareas.
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -114,7 +122,8 @@ articleView.create = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// This function is called in the articleView.initNewArticlePage() function.
+// The submission of the form.
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -127,7 +136,9 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // This function is defined in article.js.
+  // This function is called in this function! 
+  // This event is triggered when the form is submitted.
   article.insertRecord();
 };
 
