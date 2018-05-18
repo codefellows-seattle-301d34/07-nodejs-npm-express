@@ -38,6 +38,8 @@ This application is a blog, which communicates with a local server via Node.js.
 
 05-16-2018 10:53am - Server fully functional; Completed comment questions.
 
+05-17-2018 7:56pm - Added response to question in server.js.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
