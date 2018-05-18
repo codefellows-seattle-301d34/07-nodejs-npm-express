@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// The purpose of the public directory, and using it as the argument to the static() method, is to allow us to serve static files (html, js, and images). By specifying these files in their own directory, and making it the "root" directory, we can let users access these files via the address bar, and the paths will be relative from where ever we define as the "root".
 app.use(express.static('./public'));
 
 app.get('/new', (request, response) => {
